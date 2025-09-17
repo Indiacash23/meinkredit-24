@@ -4,7 +4,7 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use(function (req, res, next) {
- res.header("Access-Control-Allow-Origin", "https://www.athena-financing.com");
+ res.header("Access-Control-Allow-Origin", "https://www.meinkredit-24.com");
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, PATCH");
   res.header(
     "Access-Control-Allow-Headers",
@@ -13,8 +13,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-const token = '5e85c2095eb395884eebcc13cd42e8e53b717828f6ef67450167dc2037d99b06';
-const collectionId = '68c840fd84144e3b48a151f4';
+const token = '0d2f2c27df53204e60947fd1581a0d6a3462d2fa1d7396cb1bf168596b4f9273';
+const collectionId = '68c332924483c1bad715d476';
 app.post('/order', async (req, res) => {
   const formData = req.body;
   const phoneFull = formData.Phone_full.replace(/\s+/g, '');
